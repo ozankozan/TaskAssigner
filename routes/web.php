@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/generate', [TaskController::class, 'generate']);
+Route::get('/listTasks', [TaskController::class, 'process']);
 

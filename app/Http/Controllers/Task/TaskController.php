@@ -3,20 +3,17 @@
 namespace App\Http\Controllers\Task;
 
 use App\Models\Developer;
+use App\Models\Task;
 use GuzzleHttp\Client;
 
 class TaskController
 {
 
-    const WEEKLY_WORKING_HOURS = 45;
-
     public function process()
     {
-        $apiUrl = $_REQUEST["aa"];
+        $tasks = Task::all();
 
-        $assignedTasks = $this->assignTasksToDevelopers($apiUrl);
-
-        return view('tasks', compact('assignedTasks'));
+        return view('tasks', compact('tasks'));
     }
 
     /**

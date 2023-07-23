@@ -22,6 +22,8 @@ class CreateTasksTable extends Migration
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
 
+            /** Source can also be added to show where it came from the task. */
+
             $table->foreign('developer_id')->references('id')->on('developers');
         });
     }

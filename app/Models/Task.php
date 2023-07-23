@@ -51,6 +51,6 @@ class Task extends Model
     }
 
     public function calculateEffortHour(){
-        return $this->duration *  $this->difficulty;
+        return $this->duration * $this->difficulty;
     }
 }

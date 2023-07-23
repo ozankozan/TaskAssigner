@@ -15,18 +15,18 @@ API 2: http://www.mocky.io/v2/5d47f235330000623fa3ebf7
 
 Note: A developer can work 45 hours per week.
 
-## Usage
+## Install
 
 ```
   php artisan migrate
   php artisan db:seed --class=DeveloperSeeder
-  
+```
+
+## Usage
+
+Run this commands from cli
+```
   tasks:fetchFromApi
 ```
 
-## Endpoints
-
-| Name        | Endpoint                  |
-|:------------|:--------------------------|
-| API 1 Fetch | `/api/fetchBusinessTasks` |
-| API 2 Fetch | `/api/fetchItTasks`       |
+http://localhost:8000/listTasks
