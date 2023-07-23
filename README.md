@@ -17,16 +17,21 @@ Note: A developer can work 45 hours per week.
 
 ## Install
 
+create **.env** file from **.env.example**
+
 ```
-  php artisan migrate
-  php artisan db:seed --class=DeveloperSeeder
+composer install
+php artisan migrate
+php artisan db:seed --class=DeveloperSeeder
+php artisan key:generate
 ```
 
 ## Usage
 
 Run this commands from cli
 ```
-  tasks:fetchFromApi
+  php artisan tasks:fetchFromApi
+  php artisan serve
 ```
-
+Then view from 
 http://localhost:8000/listTasks
